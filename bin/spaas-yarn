@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+const SPaaSYarn = require('../dist/yarn/index').default
+
+// 获取第二节后的数据
+const argv = process.argv.slice(2);
+console.log(process.argv);
+const yarn = new SPaaSYarn({
+  argv
+});
+
+yarn.init();

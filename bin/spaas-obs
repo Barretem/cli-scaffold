@@ -1,0 +1,24 @@
+#!/usr/bin/env node
+const program = require('commander')
+
+const Build = require('../dist/obs/index').default
+
+program
+  .option('-C, --configPath [configPath]', '配置文件路径')
+  .option('-D, --debug [debug]', '启动调试模式')
+  .option('-E, --encoding [encoding]', '配置文件编码')
+  .parse(process.argv)
+
+const { configPath, debug, encoding } = program
+
+const args = program.args
+
+const type = args[0]
+
+const newModule = new Build({
+  type,
+  configPath,
+  debug,
+  encoding
+})
+newModule.run()

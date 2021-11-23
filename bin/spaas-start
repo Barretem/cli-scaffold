@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+
+const Start = require('../dist/start/index').default
+
+// 获取第二节后的数据
+const argv = process.argv.slice(2);
+if(argv && argv[0]) {
+  const start = new Start(argv[0]);
+  start.init();
+}
