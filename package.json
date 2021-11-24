@@ -1,8 +1,7 @@
 {
-  "name": "@spaas/cli",
-  "version": "3.2.0",
-  "description": "为spaas打造的命令行工具",
-  "main": "index.js",
+  "name": "cli-scaffold",
+  "version": "1.0.0",
+  "description": "命令行工具脚手架",
   "scripts": {
     "build": "run-s clean prod",
     "dev": "tsc -w",
@@ -27,19 +26,20 @@
     "cli",
     "spaas"
   ],
-  "author": "",
-  "license": "ISC",
+  "engines": {
+    "node": ">=12"
+  },
+  "author": "Barretem",
+  "license": "MIT",
   "publishConfig": {
     "access": "public"
   },
   "dependencies": {
     "@types/fs-extra": "^8.0.1",
     "adm-zip": "^0.4.13",
-    "ali-oss": "^6.8.0",
     "chalk": "^2.4.2",
     "commander": "^3.0.2",
     "download-git-repo": "^3.0.2",
-    "esdk-obs-nodejs": "^3.20.7",
     "execa": "^4.0.0",
     "fast-glob": "^2.2.6",
     "fs-extra": "^8.1.0",
@@ -64,6 +64,5 @@
     "tslint-config-prettier": "^1.18.0",
     "tslint-config-standard": "^8.0.1",
     "typescript": "^3.6.4"
-  },
-  "gitHead": "b95c3ab64ab380d6986dcab35328394fc7b971f6"
+  }
 }

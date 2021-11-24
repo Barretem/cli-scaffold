@@ -1,19 +1,12 @@
 #! /usr/bin/env node
 
 const program = require('commander')
-const { getPkgVersion, printPkgVersion } = require('../dist/util')
+const { getPkgVersion, printPkgVersion } = require('../dist/utils')
 
 printPkgVersion()
 
 program
   .version(getPkgVersion())
   .usage('<command> [options]')
-  .command('init [projectName]', 'Init a project with default templete')
-  .command('update', 'Update packages of spaas')
   .command('add [packages ...] [flags]', 'Add private packages of spaas')
-  .command('start', 'start dev server')
-  .command('nuxt', 'nuxt service')
-  .command('yarn', 'yarn private package')
-  .command('build', 'build project and transport to oss')
-  .command('obs', 'build project and transport to obs')
   .parse(process.argv)
