@@ -1,26 +1,24 @@
 {
+  "compileOnSave": true,
   "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
-    "allowJs": true,
     "baseUrl": ".",
-    "experimentalDecorators": true,
-    "lib": ["esnext", "dom"],
+    "outDir": "dist",
+    "rootDir": "./src",
     "module": "commonjs",
+    "sourceMap": true,
+    "declaration": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
     "moduleResolution": "node",
-    "resolveJsonModule": true,
     "noImplicitAny": false,
     "noUnusedLocals": true,
-    "outDir": "dist/",
-    "preserveConstEnums": true,
+    "noUnusedParameters": true,
     "removeComments": false,
-    "rootDir": "./src",
-    "sourceMap": false,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
     "strictNullChecks": true,
-    "target": "es2015",
-    "traceResolution": false,
-    "types" : ["node"]
+    "target": "ES2015"
   },
-  "include": [
-    "./src"
-  ]
+  "include": ["./src"],
+  "exclude": ["./src/__tests__"]
 }

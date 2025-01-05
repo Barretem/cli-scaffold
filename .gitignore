@@ -1,3 +1,4 @@
-templates/*
-!templates/default
-templates/default/.*
+node_modules/
+!src/__tests__/env/.*
+dist/*
+.DS_Store
